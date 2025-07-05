@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as FacadesRequest;
 
 class PageController extends Controller
 {
@@ -24,9 +25,12 @@ class PageController extends Controller
     public function post() {
         return view('post');
     }
-
+    
     public function contact() {
         return view('contact');
+    }
+    public function create_contact(Request $request) {
+        dd($request->all());
     }
 
 }
